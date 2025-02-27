@@ -84,8 +84,8 @@ class BinarySearchTree {
 	else if (!current.left || !current.right){
 		const child = current.left || current.right;
 		if (!parent) this.treeRoot = child;
-		else if (parent.left === current) parent.right = child;
-		else parent.left = child;
+		else if (parent.left === current) parent.left = child;
+		else parent.right = child;
 		return;
 	}
 	else {
@@ -98,7 +98,7 @@ class BinarySearchTree {
 		}
 		current.data = successor.data;
 		if (successorParent.left === successor) successorParent.left = successor.right;
-		else successorParent.right = successor.left;
+		else successorParent.right = successor.right;
 
 	}
 	
